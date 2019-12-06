@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:8181")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/alexander/api/")
 public class ActivityController {
     @Autowired
@@ -50,7 +50,7 @@ public class ActivityController {
         activity.setMemoquartz(activityDetails.getMemoquartz());
         activity.setMount(activityDetails.getMount());
         activity.setRecurency(activityDetails.getRecurency());
-        
+
         final Activity updatedActivity = activityRepository.save(activity);
         return ResponseEntity.ok(updatedActivity);
     }

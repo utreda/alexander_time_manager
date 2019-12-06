@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:8181")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/alexander/api/")
 public class UserController {
     @Autowired

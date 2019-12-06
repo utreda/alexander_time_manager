@@ -10,6 +10,7 @@ public class Mount {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String name;
     private Animal animal;
     @OneToOne
     @JoinColumn(name = "activity_id")
@@ -34,5 +35,21 @@ public class Mount {
 
     public void setTrial(Activity trial) {
         this.trial = trial;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
